@@ -23,10 +23,9 @@ Je nach dem, wie Ihr das repository herunterladet muss noch git oder zip install
 
 ### Lokal
 
-Wenn das Programm zu testen auf dem lokalen PC gestartet werden soll:
-venv starten (im Ordner "erfass"): ```source .venv/bin/activate```
-Programm starten: ```./erfass.py``` 
-(Sollte die die App nicht starten, liegt es vieleicht daran, dass erfass.py nicht ausführbar ist)
+Wenn das Programm zum testen auf dem lokalen PC gestartet werden soll:
+- venv starten (im Ordner "erfass"): ```source .venv/bin/activate```
+- Programm starten: ```./erfass.py``` (Sollte die die App nicht starten, liegt es vieleicht daran, dass erfass.py nicht ausführbar ist)\
 In dem Fall:
 
 - entweder jedes Mal: ```python3 ./erfass.py```
@@ -44,9 +43,9 @@ bzw. mit:
 
 ### Server
 
-Wenn das Programm im Einsatz ist, kommt GuniCorn zum Einsatz. \
-Hierfür gibt es das Startscript: ```startGunicorn.py``
-` (Es gilt für die Ausführbarkeit das gleiche wie oben.) 
+Wenn das Programm im produktiven Einsatz laufen, kommt GuniCorn ins Spiel. \
+Hierfür gibt es das Startscript: ```startGunicorn.py```
+(Es gilt für die Ausführbarkeit das gleiche wie oben.) 
 
 **startGunicorn.py:** \
 Es gibt drei Parameter im script, die man ändern kann: (In Klammer die Default-Werte)
