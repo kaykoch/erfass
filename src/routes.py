@@ -117,7 +117,7 @@ def handle_schueler_form(*, schulform_name: str, redirect_endpoint: str) -> Resp
 def index():
     schulform = state.schulformen.get_schulform("vollzeitschule")
     form = schulform.form_cls()
-    info = "<span class = 'blink'>Zuerst die Schule auswählen</span>"
+    info = "<span class = 'blink'>Zuerst die Schule auswählen (Vollzeit- oder Berufsschule)</span>"
     flash(Markup(info), "info")
     return render_template("vollzeitschule.html", form=form)
 

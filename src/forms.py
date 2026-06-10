@@ -55,12 +55,18 @@ class ConfigForm(FlaskForm):
 
     # Mail
     mail_server = StringField("Mail Server", validators=[Optional(), Length(max=255)])
-    mail_port = IntegerField("Mail Port", validators=[Optional(), NumberRange(min=1, max=65535)])
+    mail_port = IntegerField(
+        "Mail Port", validators=[Optional(), NumberRange(min=1, max=65535)]
+    )
     mail_use_ssl = BooleanField("Nutze SSL", validators=[Optional()])
     mail_use_tls = BooleanField("Nutze TLS", validators=[Optional()])
-    mail_username = StringField("Mail Benutzername", validators=[Optional(), Length(max=255)])
+    mail_username = StringField(
+        "Mail Benutzername", validators=[Optional(), Length(max=255)]
+    )
     mail_password = PasswordField("Mail Passwort", validators=[Optional()])
-    mail_default_sender = StringField("Standard Absender (E-Mail)", validators=[Optional(), Length(max=320)])
+    mail_default_sender = StringField(
+        "Standard Absender (E-Mail)", validators=[Optional(), Length(max=320)]
+    )
 
     submit = SubmitField("Einstellungen speichern")
 
@@ -100,7 +106,10 @@ class SchuelerBaseForm(FlaskForm):
         ("GB", "Guernsey (Britisches Überseegebiet)"),
         ("GB", "Jersey (Britisches Überseegebiet)"),
         ("GB", "Insel Man (Britisches Überseegebiet)"),
-        ("NO", "Svalbard und Jan Mayen (u. a. Bäreninsel, Spitzbergen) (Norwegisches Überseegebiet)"),
+        (
+            "NO",
+            "Svalbard und Jan Mayen (u. a. Bäreninsel, Spitzbergen) (Norwegisches Überseegebiet)",
+        ),
         ("BA", "Bosnien-Herzegowina"),
         ("AD", "Andorra"),
         ("BE", "Belgien"),
@@ -338,7 +347,10 @@ class SchuelerBaseForm(FlaskForm):
         ("CL", "Chilenische Antarktis (Chilenisches Überseegebiet)"),
         ("AU", "Australisches Antarktis-Territorium (Australisches Überseegebiet)"),
         ("AR", "Argentinische Antarktis (Argentinisches Überseegebiet)"),
-        ("NZ", "Neuseeländische Antarktis: Ross-Nebenbiet (Neuseeländisches Überseegebiet)"),
+        (
+            "NZ",
+            "Neuseeländische Antarktis: Ross-Nebenbiet (Neuseeländisches Überseegebiet)",
+        ),
         ("NN", "Staatenlos"),
         ("NN", "Ungeklärt"),
         ("NN", "ohne Angabe Staatsangehörigkeit"),
@@ -439,7 +451,9 @@ class SchuelerBaseForm(FlaskForm):
         format="%Y-%m-%d",
         default=bbs_eintrittsdatum,
         validators=[DataRequired()],
-        render_kw={"title": "Das Datum, an dem du zum ersten Mal an der BBS sein solltest"},
+        render_kw={
+            "title": "Das Datum, an dem du zum ersten Mal an der BBS sein solltest"
+        },
     )
 
     schueler_familienname = StringField(
@@ -480,7 +494,9 @@ class SchuelerBaseForm(FlaskForm):
         "Familiensprache",
         choices=[("", "Bitte wählen...")] + LANGUAGE_CHOICES,
         validators=[Optional()],
-        render_kw={"title": "Bitte wähle die Sprache aus, in der du mit deinen Eltern sprichst."},
+        render_kw={
+            "title": "Bitte wähle die Sprache aus, in der du mit deinen Eltern sprichst."
+        },
     )
     schueler_geburtsland = SelectField(
         "Geburtsland",
@@ -513,7 +529,6 @@ class SchuelerBaseForm(FlaskForm):
         validators=[Optional()],
         render_kw={"placeholder": "z.B.: Pallien"},
     )
-
     schueler_telefon_1 = StringField(
         "Telefon (Mobil)",
         validators=[Optional()],
@@ -526,11 +541,23 @@ class SchuelerBaseForm(FlaskForm):
     )
     schueler_email = EmailField(
         "E-Mail",
-        validators=[Optional(), Email(message="Bitte gieb eine gültige E-Mail-Adresse ein.")],
+        validators=[
+            Optional(),
+            Email(message="Bitte gieb eine gültige E-Mail-Adresse ein."),
+        ],
         render_kw={"placeholder": "z.B.: sekreatariat@tssbit.de"},
     )
 
-    # erziehungsberechtigte_2
+
+    erziehungsberechtigte_anzeigen = BooleanField(
+        "Bist du minderjährig",
+        default=False,
+        render_kw={
+            "title": "Bist du jünger als 18 Jahre alt?",
+        },
+    )
+
+    # erziehungsberechtigte_1
     erziehungsberechtigte_1_name = StringField(
         "Name",
         validators=[Optional()],
@@ -680,7 +707,9 @@ class SchuelerBaseForm(FlaskForm):
         "Schulart",
         choices=[("", "Bitte wählen...")] + LASTSCHOOL_CHOICES,
         validators=[DataRequired(message="Bitte wähle deine letzte Schule aus")],
-        render_kw={"title": "Was für eine Schule war das?(Realschule, Gesamtschule, ...)"},
+        render_kw={
+            "title": "Was für eine Schule war das?(Realschule, Gesamtschule, ...)"
+        },
     )
     letzte_schule_klasse = SelectField(
         "Jahrgangsstufe der letzten Klasse",
@@ -691,7 +720,9 @@ class SchuelerBaseForm(FlaskForm):
     letzte_schule_abschluss = SelectField(
         "Erreichter Abschluss",
         choices=[("", "Bitte wählen...")] + EXAM_CHOICES,
-        validators=[DataRequired(message="Bitte wähle deinen letzten Schulabschluss aus.")],
+        validators=[
+            DataRequired(message="Bitte wähle deinen letzten Schulabschluss aus.")
+        ],
         render_kw={
             "title": "Bitte wähle deinen letzten Schulabschluss aus.",
         },
@@ -700,13 +731,21 @@ class SchuelerBaseForm(FlaskForm):
         "Abgangsdatum",
         format="%Y-%m-%d",
         default=bbs_eintrittsdatum,
-        validators=[DataRequired(message="Das Datum, an dem du zum ersten Mal an der BBS sein solltest")],
-        render_kw={"title": "Das Datum, an dem du zum ersten Mal an der BBS sein solltest"},
+        validators=[
+            DataRequired(
+                message="Das Datum, an dem du zum ersten Mal an der BBS sein solltest"
+            )
+        ],
+        render_kw={
+            "title": "Das Datum, an dem du zum ersten Mal an der BBS sein solltest"
+        },
     )
     abschluss_maximal = SelectField(
         "Maximaler Abschluss",
         choices=[("", "Bitte wählen...")] + EXAM_CHOICES,
-        validators=[DataRequired(message="Bitte wähle deinen höchsten Schulabschluss aus.")],
+        validators=[
+            DataRequired(message="Bitte wähle deinen höchsten Schulabschluss aus.")
+        ],
         render_kw={"title": "Bitte wähle deinen höchsten Schulabschluss aus."},
     )
 
@@ -723,7 +762,9 @@ class SchuelerBaseForm(FlaskForm):
         "Einreisedatum",
         format="%Y-%m-%d",
         validators=[Optional()],
-        render_kw={"title": "Wenn du nur das Jahr kennst, nehme den 01.08. als Tag und Monat"},
+        render_kw={
+            "title": "Wenn du nur das Jahr kennst, nehme den 01.08. als Tag und Monat"
+        },
     )
 
 
@@ -780,7 +821,9 @@ class BerufsschuelerForm(SchuelerBaseForm):
     )
     betrieb_anprechpartner_name = StringField(
         "Ansprechpartner Name",
-        validators=[DataRequired(message="Bitte den Nachnamen des Ausbilders angeben.")],
+        validators=[
+            DataRequired(message="Bitte den Nachnamen des Ausbilders angeben.")
+        ],
         render_kw={
             "placeholder": "z.B.: Duck",
             "title": "Wie lautet der Nachname deines Ausbilders",
@@ -825,7 +868,10 @@ class BerufsschuelerForm(SchuelerBaseForm):
     )
     betrieb_email = EmailField(
         "Ansprechpartner E-Mail",
-        validators=[DataRequired(message="Bitte die E-Mail des Ausbilders angeben."), Email()],
+        validators=[
+            DataRequired(message="Bitte die E-Mail des Ausbilders angeben."),
+            Email(),
+        ],
         render_kw={
             "placeholder": "z.B.: dagobert@duck.com",
             "title": "Wie lautet die Mailadresse deines Ausbilders",
@@ -844,7 +890,9 @@ class BerufsschuelerForm(SchuelerBaseForm):
     ausbildung_start = DateField(
         "Ausbildungsstart",
         format="%Y-%m-%d",
-        validators=[DataRequired(message="Bitte das Startdatum der Ausbildung angeben.")],
+        validators=[
+            DataRequired(message="Bitte das Startdatum der Ausbildung angeben.")
+        ],
         render_kw={
             "title": "An welchem Tag begann deine Ausbildung im Betrieb?",
         },
@@ -886,9 +934,15 @@ class SchuelerAuswahlForm(FlaskForm):
         validators=[DataRequired()],
         render_kw={"id": "form_schulform"},
     )
-    submit_csv = SubmitField("Download-CSV", render_kw={"class": "btn btn-primary midi"})
-    submit_pdf = SubmitField("Download-PDF", render_kw={"class": "btn btn-primary midi"})
-    submit_xlsx = SubmitField("Download-XLSX", render_kw={"class": "btn btn-primary midi"})
+    submit_csv = SubmitField(
+        "Download-CSV", render_kw={"class": "btn btn-primary midi"}
+    )
+    submit_pdf = SubmitField(
+        "Download-PDF", render_kw={"class": "btn btn-primary midi"}
+    )
+    submit_xlsx = SubmitField(
+        "Download-XLSX", render_kw={"class": "btn btn-primary midi"}
+    )
 
 
 class FileuploadForm(FlaskForm):
