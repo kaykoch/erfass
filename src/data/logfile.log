@@ -531,3 +531,17 @@
 2026-06-10 19:05:08 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 19:05:08] "GET /berufsschule.html HTTP/1.1" 200 -
 2026-06-10 19:05:08 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 19:05:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2026-06-10 19:05:08 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 19:05:08] "[36mGET /static/logo_1000.png HTTP/1.1[0m" 304 -
+2026-06-10 19:10:04 INFO werkzeug:  * Detected change in '/home/kaykoch/Nextcloud/Python/tss_erfassungsbogen/erfass/erfass.py', reloading
+2026-06-10 19:10:04 INFO werkzeug:  * Restarting with stat
+2026-06-10 19:10:05 INFO src.app: ##################################################
+2026-06-10 19:10:05 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 19:10:05 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 19:10:05 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 19:10:05 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 19:10:05 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 19:10:05 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 19:10:05 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 19:10:05 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 19:10:05 INFO src.app: ##################################################
+2026-06-10 19:10:05 WARNING werkzeug:  * Debugger is active!
+2026-06-10 19:10:05 INFO werkzeug:  * Debugger PIN: 681-626-700

@@ -3,3 +3,6 @@
 /development
 /instance
 /skript_csv2xls.py
+erfass.py
+src/data/logfile.log
+.gitignore

@@ -46,5 +46,10 @@ logging.basicConfig(
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     from src.app import app
     app.run(debug=False)
+=======
+    from src.app import app 
+    app.run(debug=True)
+>>>>>>> 573e332 (Readme)
