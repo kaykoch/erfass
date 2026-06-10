@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Azubi Erfassung{% endblock %}
+{% block content %}
+
+    {% if showAdminMenu %}
+      {% include 'admin_navi.html' %}
+    {% else %}
+        {% include 'nav.html' %}
+    {% endif %}
+    <form method="POST">
+        <input id="schulform" name="schulform" type="hidden" value="berufsschule">
+        {% include 'schueler_fields.html' %}
+        
+        <h2 style="color: #188038; border-color: #e6f4ea;">Betriebliche Daten</h2>
+        <div class="grid">
+            <div class="field">{{ form.ausbildung_beruf.label }}
+                {{ form.ausbildung_beruf(class="form-control") }}</div>
+            <div class="field">{{ form.betrieb_name.label }}
+                {{ form.betrieb_name(class="form-control") }}</div>
+            <div class="field">{{ form.betrieb_telefon.label }}
+                {{ form.betrieb_telefon(class="form-control") }}</div>
+
+            <div class="field">{{ form.betrieb_PLZ.label }}
+                {{ form.betrieb_PLZ(class="form-control") }}</div>
+            <div class="field">{{ form.betrieb_ort.label }}
+                {{ form.betrieb_ort(class="form-control") }}</div>
+            <div class="field">{{ form.betrieb_strasse.label }}
+                {{ form.betrieb_strasse(class="form-control") }}</div>
+
+            <div class="field">{{ form.betrieb_anprechpartner_name.label }}
+                {{ form.betrieb_anprechpartner_name(class="form-control") }}</div>
+            <div class="field">{{ form.betrieb_anprechpartner_vorname.label }}
+                {{ form.betrieb_anprechpartner_vorname(class="form-control") }}</div>
+            <div class="field">{{ form.betrieb_email.label }}
+                {{ form.betrieb_email(class="form-control") }}</div>
+
+            <div class="field">{{ form.ausbildung_start.label }}
+                {{ form.ausbildung_start(class="form-control") }}</div>
+            <div class="field">{{ form.ausbildung_ende.label }}
+                {{ form.ausbildung_ende(class="form-control") }}</div>
+                            <div class="field">{{ form.ausbildung_kammer.label }}
+                {{ form.ausbildung_kammer(class="form-control") }}</div>
+
+        </div>
+        <div class="field">{{ form.submit(class="btn btn-primary big") }}</div>
+    </form>
+{% endblock %}

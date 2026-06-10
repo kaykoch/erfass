@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-wrapper">
+    <!-- Container 1 -->
+    <a href="{{ url_for('admin.route_schueleranzeige', schulform='vollzeitschule') }}" target="_self" class="tooltip"
+        data-tooltip="Anzeige und Download aller Vollzeitschüler">
+        <div class="btn vollzeitschule midi">Vollzeitschule bearbeiten</div>
+    </a>
+
+
+    <!-- Container 2 -->
+    <a href="{{ url_for('admin.route_schueleranzeige', schulform='berufsschule') }}" target="_self" class="tooltip"
+        data-tooltip="Anzeige und Download aller Berufsschüler">
+        <div class="btn berufsschule midi">Berufsschule bearbeiten </div>
+    </a>
+</div>
+<hr>
+<div class="container-wrapper">
+    <!-- Container 3 -->
+    <a href="{{ url_for('admin.route_config') }}" target="_self" class="tooltip"
+        data-tooltip="Konfigurationseite (Passwort, Mailserver etc.)">
+        <div class="btn btn-warning midi">Konfigurationsseite</div>
+    </a>
+
+    <a href="{{ url_for('admin.route_upload', action='ausbilder') }}" target="_self" class="tooltip"
+        data-tooltip="Upload der Datei mit den Klassen des neuen Jahres">
+        <div class="btn btn-warning midi">Upload Klassenliste</div>
+    </a>
+</div>
+
+<script>
+    document
+        .getElementById("clickable-box")
+        .addEventListener("click", function () {
+            // Formular per JavaScript absenden
+            document.getElementById("myForm").submit();
+        });
+</script>
+{% endblock %}

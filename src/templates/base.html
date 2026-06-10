@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="tss">&nbsp;</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message|safe }}</div>
+        {% endfor %}
+      <hr />
+      {% endif %}
+    {% endwith %}
+
+    <!-- Inhalt-->
+    {% block content %} 
+    
+    {% endblock %}
+    <div class="footer">
+      <span>This program comes with ABSOLUTELY NO WARRANTY. This is Free Software and you are welcome to redistribute it under certain conditions.</span>
+    </div>
+  </div>
+
+</body>
+
+</html>

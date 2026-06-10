@@ -1,0 +1,126 @@
+{% extends "base.html" %} 
+{% block content %}
+<h1 class="{{schulform}} midi">{{schulform}}</h1>
+<form method="POST">
+  {{ form.csrf_token }} 
+  {{ form.schulform(value=schulform) }} 
+  {{ form.klassen.label }} 
+  {{ form.klassen }}
+  <div class="container-wrapper">
+      <div class="tooltip"  data-tooltip="PDF-Datei des Erfassungsbogens">
+        {{ form.submit_pdf() }}
+      </div>      
+      <div class="tooltip"  data-tooltip="XLSX-Datei mit den Spaltennamen von edoosys">
+        {{ form.submit_xlsx() }}
+      </div>
+      <div class="tooltip"  data-tooltip="CSV-Datei mit den Spaltennamen der Datenbank">
+        {{ form.submit_csv() }}
+      </div>
+    </div>
+</form>
+
+<div>
+  <table id="untisTabelle">
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const klassenSelect = document.getElementById("klassen");
+  const schulform = document.getElementById("form_schulform").value;
+  const xTable = document.getElementById("untisTabelle");
+
+  klassenSelect.addEventListener("change", async function () {
+    const klasseName = this.value;
+    if (!klasseName) return;
+
+    try {
+      const response = await fetch(`/admin/api/zugeordete_schueler/${schulform}/${klasseName}`);
+      
+      if (!response.ok) throw new Error("Netzwerk-Antwort war nicht ok");
+      
+      const azubis = await response.json();
+
+      // Tabelle zurücksetzen
+      xTable.replaceChildren(); 
+
+      // Caption erstellen
+      const caption = document.createElement("caption");
+      caption.textContent = klasseName === "all" ? "Klasse: Alle Klassen" : `Klasse: ${klasseName}`;
+      xTable.appendChild(caption);
+
+      // Header erstellen
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+      
+      let headerHTML = `
+        <th style="width:50px;">ID</th>
+        <th style="width:240px;">Name</th>
+        <th style="width:240px;">Vorname</th>
+      `;
+      
+      if (klasseName === "all") headerHTML += '<th style="width:100px;">Klasse</th>';
+      if (schulform === "berufsschule") headerHTML += '<th>Beruf</th>';
+      
+      headerRow.innerHTML = headerHTML;
+      thead.appendChild(headerRow);
+      xTable.appendChild(thead);
+
+      // Body erstellen
+      const tbody = document.createElement("tbody");
+      let letzteKlasse = "";
+      let cssClass = "odd";
+
+      azubis.forEach((azubi) => {
+        // Logik für Zeilen-Farbe (Zebra-Muster nach Klasse)
+        if (azubi.klassenbezeichnung !== letzteKlasse) {
+          cssClass = cssClass === "even" ? "odd" : "even";
+          letzteKlasse = azubi.klassenbezeichnung;
+        }
+
+        const tr = document.createElement("tr");
+        tr.className = cssClass;
+
+        // Sicherer Aufbau der Zellen (verhindert XSS)
+        let rowContent = `
+          <td style="text-align:right;"><a href="/admin/update_schueler/${azubi.id}?schulform=${schulform}">${azubi.id}</a></td>
+          <td>${escapeHTML(azubi.schueler_familienname)}</td>
+          <td>${escapeHTML(azubi.schueler_vorname)}</td>
+        `;
+
+        if (klasseName === "all") {
+          rowContent += `<td>${escapeHTML(azubi.klassenbezeichnung)}</td>`;
+        }
+        if (schulform === "berufsschule") {
+          rowContent += `<td>${escapeHTML(azubi.ausbildung_beruf || '')}</td>`;
+        }
+
+        tr.innerHTML = rowContent;
+        tbody.appendChild(tr);
+      });
+
+      xTable.appendChild(tbody);
+
+    } catch (error) {
+      console.error("Fehler beim Laden der Daten:", error);
+    }
+  });
+});
+
+/**
+ * Hilfsfunktion zum Schutz vor XSS (Cross-Site Scripting)
+ */
+function escapeHTML(str) {
+  if (!str) return "";
+  return str.replace(/[&<>"']/g, (m) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[m]));
+}
+</script>
+
+{% endblock %}

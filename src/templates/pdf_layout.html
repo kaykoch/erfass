@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm;
+
+            @bottom-center {
+                font-size: 0.6rem;
+                content: " SJ {{ untertitel }} - Seite: " counter(page) " / " counter(pages);
+            }
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+            break-after: page;
+        }
+
+        div.schueler-block {
+            break-after: page;
+        }
+
+        h3 {
+            color: #0056b3;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        th {
+            color: black;
+            width: 200px;
+            font-size: 0.75rem;
+        }
+        td {
+            color: #0056b3;
+            font-size: 0.75rem;
+        }
+
+        td.th {
+            color: black;
+            font-weight: bold;
+        }
+
+        caption {
+            font-size: 0.9rem;
+            padding-top: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 style="margin-top: 300px;text-align: center;">Erfassungsbogen <br>({{ titel }})</h1>
+        <h2>Schuljahr {{ untertitel }} <br> {% if klasse=="all" %} Alle Klassen {%else %} {{klasse}}  {% endif %}</h2>
+    </div>
+
+    {% for s in schueler %}
+    <div class="schueler-block">
+        <h3>{{ s.schueler_familienname }}, {{ s.schueler_vorname }}</h3>
+        <table>
+            <caption>Stammdaten</caption>
+            <tbody>
+                <tr>
+                    <th>Klassenbezeichnung:</th>
+                    <td><h3>{{ s.klassenbezeichnung }}</h3></td>
+                    <td class="th">Eintrittsdatum:</td>
+                    <td>{% if s.eintrittsdatum %} {{ s.eintrittsdatum.strftime('%d.%m.%Y') }}</td>{% endif %}
+                </tr>
+                <tr>
+                    <th>Name, Vorname:</th>
+                    <td colspan="3">{{ s.schueler_familienname }}, {{ s.schueler_vorname }}</td>
+                </tr>
+                <tr>
+                    <th>Geburtsdatum, -Ort:</th>
+                    <td>{% if s.schueler_geburtsdatum %} {{ s.schueler_geburtsdatum.strftime('%d.%m.%Y') }} {% endif %}
+                    </td>
+                    <td colspan="2">{{ s.schueler_geburtsort }} ({{ s.schueler_geburtsland }})</td>
+                </tr>
+                <tr>
+                    <th>Religion:</th>
+                    <td>{{ s.schueler_religion }}</td>
+                    <th>Geschlecht:</th>
+                    <td>{{ s.schueler_geschlecht }}</td>
+                </tr>
+                <tr>
+                    <th>Staatsangehörigkeit:</th>
+                    <td colspan="3">{{ s.schueler_staatsangehörigkeit }}</td>
+                </tr>
+                <tr>
+                    <th>Straße:</th>
+                    <td colspan="3">{{ s.schueler_strasse }} {{ s.schueler_hausnummer }}</td>
+                </tr>
+                <tr>
+                    <th>PLZ, Wohnort:</th>
+                    <td>{{ s.schueler_PLZ }}</td>
+                    <td colspan="2">{{ s.schueler_wohnort }} {{ s.schueler_stadtteil }}</td>
+                </tr>
+                <tr>
+                    <th>Telefon</th>
+                    <td>{{ s.schueler_telefon_1 }}
+                    <td colspan="2">{{ s.schueler_telefon_2 }}</td>
+                </tr>
+                <tr>
+                    <th>Mail</th>
+                    <td colspan="3">{{ s.schueler_email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {# Bedingte Anzeige für Erziehungsberechtigte #}
+        {% if s.erziehungsberechtigte_1_name %}
+        <table>
+            <caption>Erziehungsberechtigte/r</caption>
+            <tbody>
+                <tr>
+                    <th>Name, Vorname:</th>
+                    <td colspan="3">{{ s.erziehungsberechtigte_1_name }}, {{ s.erziehungsberechtigte_1_vorname}}</td>
+                </tr>
+                <tr>
+                    <th>Straße:</th>
+                    <td colspan="3">{{ s.erziehungsberechtigte_1_strasse }} {{ s.erziehungsberechtigte_1_hausnummer }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>PLZ, Wohnort:</th>
+                    <td>{{ s.erziehungsberechtigte_1_PLZ }}</td>
+                    <td colspan="2">{{ s.erziehungsberechtigte_1_wohnort }} {{ s.erziehungsberechtigte_1_stadtteil}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Telefon </th>
+                    <td>{{ s.erziehungsberechtigte_1_telefon_1 }}</td>
+                    <td colspan="2">{{ s.erziehungsberechtigte_1_telefon_2 }}</td>
+                </tr>
+                <tr>
+                    <th>Mail</th>
+                    <td colspan="3">{{ s.erziehungsberechtigte_email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% endif %}
+        {% if s.erziehungsberechtigte_2_name %}
+        <table>
+            <caption>Erziehungsberechtigte/r</caption>
+            <tbody>
+                <tr>
+                    <th>Name, Vorname:</th>
+                    <td colspan="3">{{ s.erziehungsberechtigte_2_name }}, {{ s.erziehungsberechtigte_2_vorname }}</td>
+                </tr>
+                <tr>
+                    <th>Straße:</th>
+                    <td colspan="3">{{ s.erziehungsberechtigte_2_strasse }} {{ s.erziehungsberechtigte_2_hausnummer }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>PLZ, Wohnort:</th>
+                    <td>{{ s.erziehungsberechtigte_2_PLZ }}</td>
+                    <td colspan="2">{{ s.erziehungsberechtigte_2_wohnort }} {{ s.erziehungsberechtigte_2_stadtteil}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Telefon </th>
+                    <td>{{ s.erziehungsberechtigte_2_telefon_1 }}</td>
+                    <td colspan="2">{{ s.erziehungsberechtigte_2_telefon_2 }}</td>
+                </tr>
+                <tr>
+                    <th>Mail</th>
+                    <td colspan="3">{{ s.erziehungsberechtigte_email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% endif %}
+        <table>
+            <caption>Schulische Bildung</caption>
+            <tbody>
+                <tr>
+                    <th>Eintritt Grundschule:</th>
+                    <td colspan="3">{% if s.grundschule_datum %} {{ s.grundschule_datum.strftime('%d.%m.%Y') }}</td>
+                </tr>
+                <tr>
+                    <th>Letzte Schule:</th>
+                    <td colspan="3">{{ s.letzte_schule_name }} {{ s.letzte_schule_ort }}</td>
+                </tr>
+                <tr>
+                    <th>Schulart:</th>
+                    <td>{{ s.letzte_schule_schulart }}</td>
+                    <td class="th">Klasse:</td>
+                    <td>{{ s.letzte_schule_klasse }}</td>
+                </tr>
+                <tr>
+                    <th>Abschluss:</th>
+                    <td>{{ s.letzte_schule_abschluss }}</td>
+                    <td class="th">am:</td>
+                    <td>{{ s.letzte_schule_abgangsdatum.strftime('%d.%m.%Y') }}{% endif %}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        {# Bedingte Anzeige für Ausländische Schüler #}
+        {% if s.auslaender_einreisedatum %}
+        <table>
+            <caption>Ausländische Schüler/innen</caption>
+            <tbody>
+                <tr>
+                    <th>Sprache / Bedarf</th>
+                    <td>{{ s.schueler_familiensprache }} /{{ s.auslaender_foerderbedarf_deutsch }}</td>
+                    <td class="th">Einreisedatum</td>
+                    <td>{%if s.auslaender_einreisedatum %} {{ s.auslaender_einreisedatum.strftime('%d.%m.%Y') }} {%
+                        endif %}</td>
+                </tr>
+                </tr>
+
+            </tbody>
+        </table>
+        {% endif %}
+
+        {# Bedingte Anzeige für Berufsschüler #}
+        {% if s.betrieb_name %}
+        <table>
+            <caption>Ausbildung</caption>
+            <tbody>
+                <tr>
+                    <th>Name des Betriebes</th>
+                    <td colspan="3">{{ s.betrieb_name }}</td>
+                </tr>
+                <tr>
+                    <th>Straße:</th>
+                    <td colspan="3">{{ s.betrieb_strasse }}</td>
+                </tr>
+                <tr>
+                    <th>PLZ, Wohnort:</th>
+                    <td>{{ s.betrieb_PLZ }}</td>
+                    <td colspan="2">{{ s.betrieb_ort }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <th>Ansprechpartner</th>
+                    <td>{{ s.betrieb_anprechpartner_name }}</td>
+                    <td colspan="2">{{ s.betrieb_anprechpartner_vorname }}</td>
+                </tr>
+                <tr>
+                    <th>Telefon / Email </th>
+                    <td>{{ s.betrieb_telefon }}</td>
+                    <td colspan="2">{{ s.betrieb_email }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <th>Ausbildungsberuf:</th>
+                    <td>{{ s.ausbildung_beruf}}</td>
+                    <td class="th">Kammer</td>
+                    <td>{{ s.ausbildung_kammer }}</td>
+                </tr>
+                <tr>
+                    <th>Ausbildung von - bis:</th>
+                    <td colspan="3">
+                        {% if s.ausbildung_start %} {{ s.ausbildung_start.strftime('%d.%m.%Y') }} -
+                        {{s.ausbildung_ende.strftime('%d.%m.%Y')}}{% endif %}
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        {% endif %}
+    </div>
+    {% endfor %}
+</body>
+
+</html>

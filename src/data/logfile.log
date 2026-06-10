@@ -1,0 +1,230 @@
+
+2026-06-09 19:00:52 INFO src.app: ##################################################
+2026-06-09 19:00:52 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-09 19:00:52 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-09 19:00:52 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-09 19:00:52 INFO src.models: Schulform: Berufsschule geladen
+2026-06-09 19:00:52 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-09 19:00:52 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-09 19:00:52 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-09 19:00:52 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-09 19:00:52 INFO src.app: ##################################################
+2026-06-09 19:00:52 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-09 19:00:52 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-09 19:00:52 INFO werkzeug:  * Restarting with stat
+2026-06-09 19:00:53 INFO src.app: ##################################################
+2026-06-09 19:00:53 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-09 19:00:53 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-09 19:00:53 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-09 19:00:53 INFO src.models: Schulform: Berufsschule geladen
+2026-06-09 19:00:53 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-09 19:00:53 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-09 19:00:53 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-09 19:00:53 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-09 19:00:53 INFO src.app: ##################################################
+2026-06-09 19:00:53 WARNING werkzeug:  * Debugger is active!
+2026-06-09 19:00:53 INFO werkzeug:  * Debugger PIN: 865-861-921
+2026-06-09 19:06:33 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:33] "GET / HTTP/1.1" 200 -
+2026-06-09 19:06:33 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:33] "GET /static/style.css HTTP/1.1" 200 -
+2026-06-09 19:06:33 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:33] "GET /static/favicon.ico HTTP/1.1" 200 -
+2026-06-09 19:06:33 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:33] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-09 19:06:34 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:34] "[36mGET /static/logo_1000.png HTTP/1.1[0m" 304 -
+2026-06-09 19:06:34 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:34] "GET /static/favicon.ico HTTP/1.1" 200 -
+2026-06-09 19:06:39 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:39] "[31m[1mGET /admin/ HTTP/1.1[0m" 401 -
+2026-06-09 19:06:43 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:43] "GET /admin/ HTTP/1.1" 200 -
+2026-06-09 19:06:43 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-06-09 19:06:43 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:43] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-09 19:06:43 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:43] "[36mGET /static/logo_1000.png HTTP/1.1[0m" 304 -
+2026-06-09 19:06:44 INFO werkzeug: 127.0.0.1 - - [09/Jun/2026 19:06:44] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-09 19:10:23 INFO werkzeug:  * Detected change in '/home/kaykoch/Nextcloud/Python/tss_erfassungsbogen/erfass/src/routes_admin.py', reloading
+2026-06-09 19:10:23 INFO werkzeug:  * Restarting with stat
+2026-06-09 19:10:24 INFO src.app: ##################################################
+2026-06-09 19:10:24 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-09 19:10:24 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-09 19:10:24 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-09 19:10:24 INFO src.models: Schulform: Berufsschule geladen
+2026-06-09 19:10:24 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-09 19:10:24 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-09 19:10:24 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-09 19:10:24 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-09 19:10:24 INFO src.app: ##################################################
+2026-06-09 19:10:24 WARNING werkzeug:  * Debugger is active!
+2026-06-09 19:10:24 INFO werkzeug:  * Debugger PIN: 865-861-921
+2026-06-10 08:20:22 INFO src.app: ##################################################
+2026-06-10 08:20:22 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 08:20:22 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 08:20:22 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 08:20:22 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 08:20:22 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 08:20:22 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 08:20:22 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 08:20:22 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 08:20:22 INFO src.app: ##################################################
+2026-06-10 08:22:45 INFO src.app: ##################################################
+2026-06-10 08:22:45 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 08:22:45 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 08:22:45 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 08:22:45 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 08:22:45 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 08:22:45 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 08:22:45 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 08:22:45 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 08:22:45 INFO src.app: ##################################################
+2026-06-10 08:23:24 INFO src.app: ##################################################
+2026-06-10 08:23:24 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 08:23:24 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 08:23:24 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 08:23:24 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 08:23:24 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 08:23:24 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 08:23:24 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 08:23:24 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 08:23:24 INFO src.app: ##################################################
+2026-06-10 08:25:17 INFO src.app: ##################################################
+2026-06-10 08:25:17 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 08:25:17 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 08:25:17 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 08:25:17 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 08:25:17 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 08:25:17 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 08:25:17 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 08:25:17 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 08:25:17 INFO src.app: ##################################################
+2026-06-10 10:52:27 INFO src.app: ##################################################
+2026-06-10 10:52:27 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 10:52:27 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 10:52:27 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 10:52:27 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 10:52:27 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 10:52:27 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 10:52:27 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 10:52:27 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 10:52:27 INFO src.app: ##################################################
+2026-06-10 10:52:50 INFO src.app: ##################################################
+2026-06-10 10:52:50 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 10:52:50 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 10:52:50 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 10:52:50 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 10:52:50 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 10:52:50 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 10:52:50 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 10:52:50 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 10:52:50 INFO src.app: ##################################################
+2026-06-10 10:52:51 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 10:52:51 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-10 10:52:51 INFO werkzeug:  * Restarting with stat
+2026-06-10 10:52:52 INFO src.app: ##################################################
+2026-06-10 10:52:52 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 10:52:52 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 10:52:52 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 10:52:52 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 10:52:52 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 10:52:52 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 10:52:52 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 10:52:52 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 10:52:52 INFO src.app: ##################################################
+2026-06-10 10:52:52 WARNING werkzeug:  * Debugger is active!
+2026-06-10 10:52:52 INFO werkzeug:  * Debugger PIN: 125-077-954
+2026-06-10 10:52:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:52:58] "GET / HTTP/1.1" 200 -
+2026-06-10 10:52:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:52:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-06-10 10:52:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:52:58] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-10 10:52:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:52:58] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-10 10:52:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:52:58] "[36mGET /static/logo_1000.png HTTP/1.1[0m" 304 -
+2026-06-10 10:52:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:52:58] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-10 10:53:56 INFO src.app: ##################################################
+2026-06-10 10:53:56 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 10:53:56 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 10:53:56 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 10:53:56 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 10:53:56 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 10:53:56 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 10:53:56 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 10:53:57 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 10:53:57 INFO src.app: ##################################################
+2026-06-10 10:53:57 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 10:53:57 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-10 10:53:57 INFO werkzeug:  * Restarting with stat
+2026-06-10 10:53:58 INFO src.app: ##################################################
+2026-06-10 10:53:58 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 10:53:58 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 10:53:58 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 10:53:58 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 10:53:58 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 10:53:58 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 10:53:58 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 10:53:58 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 10:53:58 INFO src.app: ##################################################
+2026-06-10 10:53:58 WARNING werkzeug:  * Debugger is active!
+2026-06-10 10:53:58 INFO werkzeug:  * Debugger PIN: 125-077-954
+2026-06-10 10:53:58 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:53:58] "[31m[1mGET /admin/ HTTP/1.1[0m" 401 -
+2026-06-10 10:54:03 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:03] "GET /admin/ HTTP/1.1" 200 -
+2026-06-10 10:54:03 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-06-10 10:54:03 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:03] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-10 10:54:03 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:03] "[36mGET /static/logo_1000.png HTTP/1.1[0m" 304 -
+2026-06-10 10:54:03 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:03] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2026-06-10 10:54:05 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:05] "GET /admin/schueleranzeige.html?schulform=berufsschule HTTP/1.1" 200 -
+2026-06-10 10:54:05 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-06-10 10:54:06 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:06] "GET /admin/api/zugeordete_schueler/berufsschule/all HTTP/1.1" 200 -
+2026-06-10 10:54:08 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:08] "GET /admin/update_schueler/2?schulform=berufsschule HTTP/1.1" 200 -
+2026-06-10 10:54:08 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-06-10 10:54:08 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:08] "[36mGET /static/logo_1000.png HTTP/1.1[0m" 304 -
+2026-06-10 10:54:14 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:14] "GET /admin/schueleranzeige.html?schulform=berufsschule HTTP/1.1" 200 -
+2026-06-10 10:54:16 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:16] "GET /admin/ HTTP/1.1" 200 -
+2026-06-10 10:54:17 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:17] "GET /admin/schueleranzeige.html?schulform=vollzeitschule HTTP/1.1" 200 -
+2026-06-10 10:54:17 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-06-10 10:54:19 INFO werkzeug: 127.0.0.1 - - [10/Jun/2026 10:54:19] "GET /admin/api/zugeordete_schueler/vollzeitschule/all HTTP/1.1" 200 -
+2026-06-10 11:23:45 INFO src.app: ##################################################
+2026-06-10 11:23:45 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 11:23:45 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 11:23:45 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 11:23:45 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 11:23:45 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 11:23:45 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 11:23:45 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 11:23:45 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 11:23:45 INFO src.app: ##################################################
+2026-06-10 11:23:45 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 11:23:45 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-10 11:23:45 INFO werkzeug:  * Restarting with stat
+2026-06-10 11:23:47 INFO src.app: ##################################################
+2026-06-10 11:23:47 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 11:23:47 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 11:23:47 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 11:23:47 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 11:23:47 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 11:23:47 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 11:23:47 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 11:23:47 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 11:23:47 INFO src.app: ##################################################
+2026-06-10 11:23:47 WARNING werkzeug:  * Debugger is active!
+2026-06-10 11:23:47 INFO werkzeug:  * Debugger PIN: 381-653-364
+2026-06-10 16:45:27 INFO src.app: ##################################################
+2026-06-10 16:45:27 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 16:45:27 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 16:45:27 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 16:45:27 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 16:45:27 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 16:45:27 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 16:45:27 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 16:45:27 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 16:45:27 INFO src.app: ##################################################
+2026-06-10 16:45:27 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 16:45:27 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-06-10 16:45:27 INFO werkzeug:  * Restarting with stat
+2026-06-10 16:45:28 INFO src.app: ##################################################
+2026-06-10 16:45:28 INFO src.extensions: Datei: klassenfile vorhanden
+2026-06-10 16:45:28 INFO src.extensions: Datei: prototype_klassen vorhanden
+2026-06-10 16:45:28 INFO src.extensions: Datei: prototype_bewerber vorhanden
+2026-06-10 16:45:28 INFO src.models: Schulform: Berufsschule geladen
+2026-06-10 16:45:28 INFO src.models: Schulform: Vollzeitschule geladen
+2026-06-10 16:45:28 INFO src.models: 31 Schulklassen aus CSV geladen.
+2026-06-10 16:45:28 INFO src.helpies: Datenbanktabellen erstellt/überprüft.
+2026-06-10 16:45:28 INFO src.app: App: Erfassungsbogen wurde erfolgreich gestartet
+2026-06-10 16:45:28 INFO src.app: ##################################################
+2026-06-10 16:45:28 WARNING werkzeug:  * Debugger is active!
+2026-06-10 16:45:28 INFO werkzeug:  * Debugger PIN: 119-258-991

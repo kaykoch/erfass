@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Schüler Erfassung{% endblock %}
+
+{% block content %}
+    {% if showAdminMenu %}
+      {% include 'admin_navi.html' %}
+    {% else %}
+        {% include 'nav.html' %}
+    {% endif %}
+
+    <form method="POST">
+        {{ form.schulform(value=schulform) }} 
+        {% include 'schueler_fields.html' %}
+    
+        <div class="field">{{ form.submit(class="btn btn-primary big") }}</div>
+    </form>
+{% endblock %}

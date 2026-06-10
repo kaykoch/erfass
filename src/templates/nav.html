@@ -1,0 +1,19 @@
+    <!-- Navigations Buttons-->
+    <div class="container-wrapper">
+      <a href="{{ url_for('main.route_vollzeitschule') }}" target="_self" class="box-link tooltip"
+        data-tooltip="z.B.: BVJ, BF1, BF2, HBF etc.">
+        <div class="btn vollzeitschule midi">Vollzeitschule</div>
+      </a>
+
+      <a href="{{ url_for('main.route_berufsschule') }}" target="_self" class="box-link tooltip "
+        data-tooltip="Duale Ausbildung (Beruf + Schule)">
+        <div class="btn berufsschule midi">Berufsschule</div>
+      </a>
+    </div>
+    {% if schulform == "vollzeitschule" %}
+    <h1  class={{schulform}}>Neuer Vollzeitschüler</h1>
+    {% elif schulform == "berufsschule" %}
+    <h1  class={{schulform}}>Neuer Auszubildender</h1>
+    {% else %}
+      <p class="success-msg">Wenn Du deine Klasse noch nicht kennst, wähle UNBEKANNT aus</p>
+    {% endif %}

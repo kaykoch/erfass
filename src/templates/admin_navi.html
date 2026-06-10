@@ -1,0 +1,21 @@
+<div class="container-wrapper">
+    <a href="{{ url_for('admin.route_updateschueler', id=schueler.id, action='back', schulform=schulform, klasse=schueler.klassenbezeichnung) }}"
+        target="_self" class="tooltip" data-tooltip="Vorheriger Schüler dieser Klasse">
+        <div class="btn {{schulform}} midi">VorherigerSchüler</div>
+    </a>
+    <a href="{{ url_for('admin.route_updateschueler', id=schueler.id, action='next', schulform=schulform, klasse=schueler.klassenbezeichnung) }}"
+        target="_self" class="tooltip" data-tooltip="Nächster Schüler dieser Klasse">
+        <div class="btn {{schulform}} midi">Nächster Schüler</div>
+    </a>
+
+    <a href="{{ url_for('admin.route_schueleranzeige', schulform=schulform) }}" target="_self" class="tooltip"
+        data-tooltip="Zurück zur Klassenauswahl">
+        <div class="btn btn-warning small">zurück</div>
+    </a>
+
+    <a href="{{ url_for('admin.route_admin') }}" target="_self" class="tooltip" data-tooltip="Zurück zum Adminmenü">
+        <div class="btn btn-warning small">Hauptmenü</div>
+    </a>
+
+</div>
+<h1 class="{{schulform}} midi">{{schulform}}</h1>

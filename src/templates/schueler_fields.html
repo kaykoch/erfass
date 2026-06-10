@@ -1,0 +1,166 @@
+<h2>Schülerdaten</h2>
+{{ form.csrf_token }}
+<div class="grid">
+    <div class="field">
+        {{ form.klassenbezeichnung.label }}
+        {{ form.klassenbezeichnung(class="form-control") }}
+    </div>
+    <div class="field">
+        {{ form.eintrittsdatum.label }}
+        {{ form.eintrittsdatum(class="form-control") }}
+    </div>
+    <div class="field"><label></label></div>
+</div>
+<hr>
+
+<div class="grid">
+    <!-- ##########################################-->
+    <div class="field">{{ form.schueler_familienname.label }}
+        {{ form.schueler_familienname(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_vorname.label }}
+        {{ form.schueler_vorname(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_geschlecht.label }}
+        {{ form.schueler_geschlecht(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.schueler_PLZ.label }}
+        {{ form.schueler_PLZ(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_wohnort.label }}
+        {{ form.schueler_wohnort(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_stadtteil.label }}
+        {{ form.schueler_stadtteil(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.schueler_strasse.label }}
+        {{ form.schueler_strasse(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_hausnummer.label }}
+        {{ form.schueler_hausnummer(class="form-control") }}</div>        
+    <div class="field"><label></label></div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.schueler_geburtsdatum.label }}
+        {{ form.schueler_geburtsdatum(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_geburtsort.label }}
+        {{ form.schueler_geburtsort(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_geburtsland.label }}
+        {{ form.schueler_geburtsland(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.schueler_staatsangehörigkeit.label }}
+        {{ form.schueler_staatsangehörigkeit(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_familiensprache.label }}
+        {{ form.schueler_familiensprache(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_religion.label }}
+        {{ form.schueler_religion(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.schueler_telefon_1.label }}
+        {{ form.schueler_telefon_1(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_telefon_2.label }}
+        {{ form.schueler_telefon_2(class="form-control") }}</div>
+    <div class="field">{{ form.schueler_email.label }}
+        {{ form.schueler_email(class="form-control") }}</div>
+
+
+</div>
+
+<h2>Erziehungsberechtigte 1 (Eltern / Vormund / Betreuer)<br>
+    <span>(Für Jugendliche unter 18 Jahren)</span>
+</h2>
+<div class="grid">
+    <!-- ##########################################-->    
+    <div class="field">{{ form.erziehungsberechtigte_1_name.label }}
+        {{ form.erziehungsberechtigte_1_name(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_1_vorname.label }}
+        {{ form.erziehungsberechtigte_1_vorname(class="form-control") }}</div>  
+    <div class="field">{{ form.erziehungsberechtigte_1_art.label }}
+        {{ form.erziehungsberechtigte_1_art(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.erziehungsberechtigte_1_PLZ.label }}
+        {{ form.erziehungsberechtigte_1_PLZ(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_1_wohnort.label }}
+        {{ form.erziehungsberechtigte_1_wohnort(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_1_stadtteil.label }}
+        {{ form.erziehungsberechtigte_1_stadtteil(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.erziehungsberechtigte_1_strasse.label }}
+        {{ form.erziehungsberechtigte_1_strasse(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_1_hausnummer.label }}
+        {{ form.erziehungsberechtigte_1_hausnummer(class="form-control") }}</div>  
+    <div class="field"><label></label></div>
+    <!-- ##########################################-->        
+    <div class="field">{{ form.erziehungsberechtigte_1_telefon_1.label }}
+        {{ form.erziehungsberechtigte_1_telefon_1(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_1_telefon_2.label }}
+        {{ form.erziehungsberechtigte_1_telefon_2(class="form-control") }}</div>        
+    <div class="field">{{ form.erziehungsberechtigte_1_email.label }}
+        {{ form.erziehungsberechtigte_1_email(class="form-control") }}</div>
+
+</div>
+
+<h2>Erziehungsberechtigte 2 (Eltern / Vormund / Betreuer)<br>
+    <span>(Für Jugendliche unter 18 Jahren)</span>
+</h2>
+<div class="grid">
+    <div class="field">{{ form.erziehungsberechtigte_2_name.label }}
+        {{ form.erziehungsberechtigte_2_name(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_2_vorname.label }}
+        {{ form.erziehungsberechtigte_2_vorname(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_2_art.label }}
+        {{ form.erziehungsberechtigte_2_art(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.erziehungsberechtigte_2_PLZ.label }}
+        {{ form.erziehungsberechtigte_2_PLZ(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_2_wohnort.label }}
+        {{ form.erziehungsberechtigte_2_wohnort(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_2_stadtteil.label }}
+        {{ form.erziehungsberechtigte_2_stadtteil(class="form-control") }}</div>
+    <!-- ##########################################-->
+    <div class="field">{{ form.erziehungsberechtigte_2_strasse.label }}
+        {{ form.erziehungsberechtigte_2_strasse(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_2_hausnummer.label }}
+        {{ form.erziehungsberechtigte_2_hausnummer(class="form-control") }}</div>  
+    <div class="field"><label></label></div>
+    <!-- ##########################################-->        
+    <div class="field">{{ form.erziehungsberechtigte_2_telefon_1.label }}
+        {{ form.erziehungsberechtigte_2_telefon_1(class="form-control") }}</div>
+    <div class="field">{{ form.erziehungsberechtigte_2_telefon_2.label }}
+        {{ form.erziehungsberechtigte_2_telefon_2(class="form-control") }}</div>        
+    <div class="field">{{ form.erziehungsberechtigte_2_email.label }}
+        {{ form.erziehungsberechtigte_2_email(class="form-control") }}</div>
+</div>
+
+
+<h2>Schulhistorie</h2>
+<div class="grid">
+    <div class="field">{{ form.grundschule_datum.label }}
+        {{ form.grundschule_datum(class="form-control")}}</div>
+    <div class="field"></div>
+    <div class="field"></div>
+
+    <div class="field">{{ form.letzte_schule_name.label }}
+        {{ form.letzte_schule_name(class="form-control") }}</div>
+    <div class="field">{{ form.letzte_schule_ort.label }}
+        {{ form.letzte_schule_ort(class="form-control") }}</div>
+    <div class="field">{{ form.letzte_schule_schulart.label }}
+        {{ form.letzte_schule_schulart(class="form-control") }}</div>
+
+    <div class="field">{{ form.letzte_schule_klasse.label }}
+        {{ form.letzte_schule_klasse(class="form-control") }}</div>
+    <div class="field">{{ form.letzte_schule_abschluss.label }}
+        {{ form.letzte_schule_abschluss(class="form-control") }}</div>
+        
+    <div class="field">{{ form.letzte_schule_abgangsdatum.label }}
+        {{ form.letzte_schule_abgangsdatum(class="form-control") }}</div>
+
+    <div class="field">{{ form.abschluss_maximal.label }}
+        {{ form.abschluss_maximal(class="form-control") }}</div>
+    <div class="field"></div>
+    <div class="field"></div>
+</div>
+
+<h2>Zusatzangaben (für ausländische Schüler/innen)</h2>
+<div class="grid">
+
+
+    <div class="field">{{ form.auslaender_einreisedatum.label }}
+        {{ form.auslaender_einreisedatum(class="form-control") }}</div>
+   <div class="field">{{ form.auslaender_foerderbedarf_deutsch.label }}
+        {{ form.auslaender_foerderbedarf_deutsch(class="form-control") }}</div>
+        <div class="field"><label></label></div>
+</div>
