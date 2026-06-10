@@ -14,7 +14,6 @@ Auf dem Server muss python3 (>= 3.11), pip3 und python3-venv installiert sein
 Je nach dem, wie Ihr das repository herunterladet muss noch git oder zip installiert werden
 
 ### Installation
-
 - Erstellen eines Zielordners: ``` mkdir erfass ```
 - Herunterladen der App ```git clone https://github.com/kaykoch/erfass.git```
 - In Ordner hineinspringer ``` cd erfass ```
