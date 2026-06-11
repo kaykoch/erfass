@@ -97,6 +97,7 @@ http://<SERVER_URL>:PORT//admin
  
 ## Benutzung
 ### Schüler
+![alt text](static/benutzer.jpg)
 - Auswahl von Vollzeit- oder Berufsschüler
   - -> Unterschiedliche Klassen und Bereiche
 - Auswahl von Klassen
