@@ -114,7 +114,9 @@ http://<SERVER_URL>:PORT//admin
     (Fest codiert)
 
 ### Administration
-![Administration 1](src/static/administration_01.jpg)
+![Administration 1](src/static/administration_01.jpg) 
+
+![Administration 1](src/static/administration_02.jpg)
 - Auswahl von Vollzeit- oder Berufsschüler
   - -> Auswahl zur Anzeige bestimmter Klassen oder aller Schüler
   - -> nach Auswahl:
@@ -122,7 +124,8 @@ http://<SERVER_URL>:PORT//admin
     - -> Download der angezeigten Schüler als PDF (ein Blatt pro Schüler)
     - -> Download der angezeigten Schüler als CSV zur weiteren Verarbeitung für Notenhefte, Server-Accounts, Mailprogramme, usw.
     - -> Download der angezeigten Schüler als XLSX zum Import in edoosys
-![Administration 1](src/static/administration_02.jpg)
+ 
+
 - Konfigurationsseite   
   - -> Administrationslogin und -passwort
   - -> Zugangsdaten für Mailaccount (Vielleicht für später)
