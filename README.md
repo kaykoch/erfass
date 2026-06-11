@@ -104,7 +104,7 @@ http://<SERVER_URL>:PORT//admin
   - -> unterschiedliche Klassen, je Schulform + UNBEKANNT für Bewerber \
       (Kann per Datei jedes Jahr neu hochgeladen werden)
 - Vorbesetzung von Daten (Plural von Datum)
-  - -> Eintrittsdatum: dieses 01.08.aktuelles_Jahr
+  - -> Eintrittsdatum: 01.08.aktuelles_Jahr
   - -> Geburtsdatum: 01.01.Vor_17_Jahren
   - -> Einschulung: 01.08.Geburtjahr + 6 
 - Auswahl Minderjährig
